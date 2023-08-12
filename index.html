@@ -23,7 +23,7 @@
 							<li><a href="#one">How Does This Work?</a></li>
 							<li><a href="#two">Example</a></li>
 							<li><a href="#three">How To Invest</a></li>
-							<li><a href="#four">Get in touch</a></li>
+							<li><a href="#four">About & Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -98,59 +98,180 @@
 				<section id="two" class="wrapper style3 fade-up" style="background-color: rgb(39, 55, 196);">
 					<div class="inner">
 						<h2>Example</h2>
-						<p>UK taxpayers pay income tax on the regular coupon payments 
-							they receive from the bond issuer, whether that be the UK government or a company. 
-							UK taxpayers are however exempt from paying capital gains tax (CGT) on any uplift 
-							in price between the price they pay for the bond and the price at which they sell 
-							the bond (or at which the principal is repaid by the issuer).</p>
-					</div>
-					<div class="inner">
-					<h3>Alternate</h3>
+						<p>This example compares the strcture of payoffs for the bonds against a regular and fixed-term savings account. <br>
+							SMALL FONT It also clearly displays what is meant by <i>Gross Equivalent Yield</i> (GEY) <br>
+							For the purposes of this example, the tax rate is set at 45% (additional rate). <br>
+						SMALL FONT. Note: we have rounded values to 2dp, so may not add up correctly.</p>
+					<!-- </div>
+					<div class="inner"> -->
+					<h3>Bond</h3>
+					<p>The bond here is free of capital gains tax, so could be a UK Government
+						Bonds (Gilt) or Qualifying Corporate Bond (QCB).<br>
+						For technical people, coupons are <i>not</i> reinvested here, meaning this is a <i>lower bound</i> for GEY
+						(the actual return will be even better).</p>
+					<ul class="alt">
+						<li>Price: £85.51</li>
+						<li>Face Value: £100.00</li>
+						<li>Coupon: 0.250%</li>
+						<li>Time to Maturity: 3 years</li>
+						<li></li>
+					</ul>
 					<div class="table-wrapper">
+						<table>
 						<table class="alt">
 							<thead>
 								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
+									<th>Year</th>
+									<th>Gross Gain (£)</th>
+									<th>Net Gain (£)</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Item One</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
+									<td>Year 1</td>
+									<td>0.25 (Coupon)</td>
+									<td>0.14 (Coupon)</td>
 								</tr>
 								<tr>
-									<td>Item Two</td>
-									<td>Vis ac commodo adipiscing arcu aliquet.</td>
-									<td>19.99</td>
+									<td>Year 2</td>
+									<td>0.25 (Coupon)</td>
+									<td>0.14 (Coupon)</td>
 								</tr>
 								<tr>
-									<td>Item Three</td>
-									<td> Morbi faucibus arcu accumsan lorem.</td>
-									<td>29.99</td>
+									<td>Year 3</td>
+									<td>0.25 (Coupon) + 14.49 (Capital Gain) </td>
+									<td>0.14 (Coupon) + 14.49 (Capital Gain)</td>
 								</tr>
 								<tr>
-									<td>Item Four</td>
-									<td>Vitae integer tempus condimentum.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Five</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
+									<td>Total</td>
+									<td>15.23 <br> 0.75 (Coupon) + 14.49 (Capital Gain)</td>
+									<td>14.90 = 0.41 (Coupon) + 14.49 (Capital Gain)</td>
 								</tr>
 							</tbody>
 							<tfoot>
 								<tr>
-									<td colspan="2"></td>
-									<td>100.00</td>
+									<!-- <td colspan="2"></td> -->
+									<td>Net Return</td>
+									<td>14.90/85.50</td>
+									<td>17.43%</td>
+									<!-- <td>Total</td>
+									<td>15.23 <br> 0.75 (Coupon) + 14.49 (Capital Gain)</td>
+									<td>14.90 = 0.41 (Coupon) + 14.49 (Capital Gain)</td> -->
+								</tr>
+							</tfoot>
+						</table>
+						
+					</div>
+					<h3>Regular Savings Account</h3>
+					<p>The regular savings account is what one would typically hold in a bank. 
+						The interest earnt per year is increasing as it is compounding.</p>
+					<ul class="alt">
+						<li>Holding time: 3 years</li>
+						<li>Annual Earning Rate (AER): 10.00%</li>
+						<li></li>
+					</ul>
+					<div class="table-wrapper">
+						<table>
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Year</th>
+									<th>Gross Gain (£)</th>
+									<th>Net Gain (£)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Year 1</td>
+									<td>8.55 (Interest)</td>
+									<td>4.70 (Interest)</td>
+								</tr>
+								<tr>
+									<td>Year 2</td>
+									<td>9.02 (Interest)</td>
+									<td>4.96 (Interest)</td>
+								</tr>
+								<tr>
+									<td>Year 3</td>
+									<td>9.52 (Interest)</td>
+									<td>5.24 (Interest)</td>
+								</tr>
+								<tr>									
+									<td>Total</td>
+									<td>27.10 <br> (Interest)</td>
+									<td>14.90 (Interest)</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<!-- <td colspan="1"></td> -->
+									<td>Net Return</td>
+									<td>14.90/85.50</td>
+									<td>17.43%</td>
 								</tr>
 							</tfoot>
 						</table>
 					</div>
+					<h3>Fixed-Term Savings Account</h3>
+					<p>This is when you lock your money away in a savings account for a certain amount of time. 
+						All interest income is taxed at the end of the term, hence the net gain column is empty.
+						As in the regular savings account, <thead></thead> interest earnt per year is increasing as it is compounding.
+					</p>
+					<ul class="alt">
+						<li>Holding time: 3 years</li>
+						<li>Annual Earning Rate (AER): 9.61%</li>
+						<li></li>
+					</ul>
+					<div class="table-wrapper">
+						<table>
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Year</th>
+									<th>Gross Gain (£)</th>
+									<th>Net Gain (£)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Year 1</td>
+									<td>8.22 (Interest)</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Year 2</td>
+									<td>9.01 (Interest)</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Year 3</td>
+									<td>9.87 (Interest)</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Total</td>
+									<td>27.10 <br> (Interest)</td>
+									<td>14.90 (Interest)</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<!-- <td colspan="1"></td> -->
+									<td>Net Return</td>
+									<td>14.90/85.50</td>
+									<td>17.43%</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<p>All three investments (bonds, regular savings, fixed-term savings) achieve the same net 
+						 of 17.43% (equivalent to 5.50% net AER). 
+						 This is precisely the concept of GEY, the equivalent interest rate required 
+						 in a savings account to achieve the same return as a bond with specific parameters. <br><br>
+						 The effecive tax rate for the bond is (15.23-14.90)/15.23=2.17% 
+						 and for both savings accounts it is (27.10-14.90)/27.10=45%, the marginal tax rate of the individual.</p>
 				</div>
+				
 				</section>
 
 				</section>
@@ -270,6 +391,7 @@
 								</section>
 							</div> -->
 						</div>
+						
 					</section>
 
 			</div>
@@ -278,7 +400,12 @@
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Yajat Bansal and Tariq Shaikh. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2023 Yajat Bansal and Tariq Shaikh. All rights reserved.</li>
+						<li><a href="disclaimer.html">Disclaimer</a></li>
+						<li><a href="privacy_policy.html">Privacy Policy</a></li>
+						<li><a href="cookies.html">Cookies Disclosure</a></li>
+						<li><a href="info@investinginbonds.co.uk">info@investinginbonds.co.uk</a></li>
+						<!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
 					</ul>
 				</div>
 			</footer>
