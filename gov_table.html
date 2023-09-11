@@ -10,7 +10,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Link to the external CSS file -->
+		<!-- <link rel="stylesheet" href="csvDisplay.css"> -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 	</head>
 	<body class="is-preload">
 
@@ -20,8 +24,10 @@
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
+						<li><a href="gov_table.html" class="active">Top Gilts</a></li>
+						<li><a href="corp_table.html">Corporate Bonds</a></li>
+						<li><a href="calc.html">Yield Calculator</a></li>
+						<li><a href="index.html#three">Invest Now</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -30,25 +36,55 @@
 			<div id="wrapper">
 
 				<!-- Main -->
+
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1 class="major">Top Yielding Government Bonds (Gilts)</h1>
+							<p>Choose your tax band and find the best Government bonds sorted by Gross Equivalent Yield.</p>
+								<div class="button-container">
+									<button class="button primary" data-csv="gov_bonds_a.csv" onclick="loadCSV('bonds1.csv')">Additional Rate</button>
+									<button class="button" data-csv="gov_bonds_h.csv" onclick="loadCSV('gov_bonds_h.csv')">Higher Rate</button>
+									<button class="button" data-csv="gov_bonds_b.csv" onclick="loadCSV('gov_bonds_b.csv')">Basic Rate</button>
+									<button class="button" data-csv="gov_bonds_pa.csv" onclick="loadCSV('gov_bonds_pa.csv')">Personal Allowance</button>
+								</div>
+								<p></p>
+								<!-- Table to display CSV content -->
+								<table id="csvTable"></table>
+								<p align="right">Data Sourced from London Stock Exchange, and delayed by at least 15 minutes. For indicative purposes only.</p>
 						</div>
 					</section>
-
 			</div>
 
+
+  
+  <!-- Linking the external JavaScript file -->
+  <script src="csvLoader.js"></script>  
+  
+
 		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
+			<!-- <footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
 						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
-			</footer>
+			</footer> -->
+
+			
+		<!-- Footer -->
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; 2023 Yajat Bansal and Tariq Shaikh. All rights reserved.</li>
+					<li><a href="disclaimer.html">Disclaimer</a></li>
+					<li><a href="privacy_policy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Disclosure</a></li>
+					<li><a href="info@investinginbonds.co.uk">info@investinginbonds.co.uk</a></li>
+					<!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+				</ul>
+			</div>
+		</footer>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

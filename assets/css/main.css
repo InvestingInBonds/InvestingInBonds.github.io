@@ -3362,6 +3362,7 @@ input, select, textarea {
 		body.is-preload .wrapper.fade > .inner {
 			opacity: 0;
 		}
+		  
 
 /* Header */
 
@@ -3907,3 +3908,32 @@ input, select, textarea {
 			}
 
 		}
+
+/* Style for the outer container */
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 80vh;           /* Full viewport height. Adjust if needed */
+}
+
+/* Mobile styles */
+.responsive-col {
+    width: 100%;             /* Full width on mobile */
+    box-sizing: border-box;  /* Include padding in the total width */
+    padding: 0 0px;         /* Provide some padding on mobile */
+}
+
+/* Image styles to ensure it scales nicely */
+.image.fit img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    .responsive-col {
+        width: 33.33%;       /* 1/3rd width on desktop */
+		padding: 0;
+    }
+}

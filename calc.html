@@ -21,8 +21,21 @@
             background-color: #f4f5f7;
         } */
 
+		.calculator-container {
+        background-color: white;
+		}
+
+		.black-text {
+		color: black;
+		}
+
+		.black-border {
+			border: 1px solid black;
+		}
+
+
         div.container {
-            /* background-color: #030000e8; */
+            background-color: #ffffffe8;
             border: 1px solid #ddd;
             padding: 20px;
             border-radius: 5px;
@@ -61,7 +74,9 @@
             background-color: #007BFF;
             width: 90%; 
 			height: 10%;
+			/* padding: 15px 20px; */
             margin-left: 5%; /* Centering the button */
+			
         }
 
         #ajbell {
@@ -120,18 +135,19 @@
     </style>
 	</head>
 	<body class="is-preload">
-
 		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">InvestingInBonds</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header id="header">
+			<a href="index.html" class="title">InvestingInBonds</a>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="gov_table.html" >Top Gilts</a></li>
+					<li><a href="corp_table.html">Corporate Bonds</a></li>
+					<li><a href="calc.html" class="active">Yield Calculator</a></li>
+					<li><a href="index.html#three">Invest Now</a></li>
+				</ul>
+			</nav>
+		</header>
 
 
 <script>
@@ -210,7 +226,7 @@
 	<input type="number" id="price" step="0.01" min="0" value="0">
 
 	<label for="taxRateBand">Tax Rate Band:</label>
-	<select id="taxRateBand">
+	<select id="taxRateBand" class="black-border">
 		<option value="additional">Additional</option>
 		<option value="higher">Higher</option>
 		<option value="basic">Basic</option>
@@ -218,18 +234,19 @@
 	</select>
 
 	<label for="savingsAccountType">Savings Account Type:</label>
-	<select id="savingsAccountType">
+	<select id="savingsAccountType" class="black-border">
 		<option value="Regular">Regular</option>
 		<option value="Fixed-Term">Fixed-Term</option>
 	</select>
 
 	<button onclick="calculateGEY()">Calculate</button>
 	
+	<div class="black-text">
 	<div id="output">Gross Equivalent Yield</div>
 	<div id="output-value">-%</div>
 	<div id="explanation"></div>
-
-	<h3>Invest Now</h3>
+</div>
+	<h3 class="black-text">Invest Now</h3>
 	<!-- Link Buttons -->
 	<div class="button-section">
 		<a href="https://www.ajbell.co.uk/" target="_blank" class="link-button" id="ajbell">AJ Bell</a>
@@ -240,18 +257,20 @@
 </div>
 
 <!-- Model Assumptions and Disclaimer -->
+
 <div class="container">
-	<h2 onclick="toggleContent('assumptions-content')">Technical Assumptions ▼</h2>
+	<div class="black-text">
+	<h4 onclick="toggleContent('assumptions-content')" class="black-text">Technical Assumptions ▼</h4>
 	<div class="collapsible-content" id="assumptions-content">
 <ul>
-<li>Coupons are not reinvested. This means that the calculator is actually <strong>underestimating</strong> true Gross Equivalent Yield if one were to reinvest coupon payments.</li>
+<li>Coupons are not reinvested. This means that the calculator is actually underestimating true Gross Equivalent Yield if one were to reinvest coupon payments.</li>
 <li>HS343 Accrued Income Scheme (2021) holds.</li>
 <li>User has no Personal Savings Allowance (PSA) remaining. Note that additional rate taxpayers receive zero PSA.</li>
 <li>The bond for which parameters are being inputted is risk-free.</li>
 </ul>
 	</div>
 
-	<h2 onclick="toggleContent('disclaimer-content')">Disclaimer ▼</h2>
+	<h4 onclick="toggleContent('disclaimer-content')" class="black-text">Disclaimer ▼</h4>
 	<div class="collapsible-content" id="disclaimer-content">
 		The information provided on this website is intended solely for informational purposes and does not constitute tax or investment advice. Users of this website are advised to seek independent financial and tax advice from qualified professionals before making any investment decisions.<br><br>
 
@@ -264,7 +283,7 @@ The website owners, administrators, authors, and affiliates shall not be held li
 By using this website, users agree to indemnify and hold harmless the website owners, administrators, authors, and affiliates from any claims, losses, damages, or liabilities that may arise as a result of reliance on the information provided on the website.<br><br>
 
 It is recommended that users carefully read and understand this disclaimer before accessing or using any information on the website. Your continued use of the website constitutes your acceptance and agreement to abide by this disclaimer.
-	</div>
+	</div></div>
 </div>
 						</div>
 						
@@ -273,13 +292,19 @@ It is recommended that users carefully read and understand this disclaimer befor
 			</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; 2023 Yajat Bansal and Tariq Shaikh. All rights reserved.</li>
+					<li><a href="disclaimer.html">Disclaimer</a></li>
+					<li><a href="privacy_policy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Disclosure</a></li>
+					<li><a href="info@investinginbonds.co.uk">info@investinginbonds.co.uk</a></li>
+					<!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+				</ul>
+			</div>
+		</footer>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

@@ -1,0 +1,58 @@
+/* Center buttons and add external padding */
+.button-container {
+    text-align: center;
+  }
+  
+  .button-container button {
+    margin: 20px;  /* External spacing */
+    padding: 2px 30px;  /* Internal padding */
+    font-size: 14px;
+  }
+  
+  /* Responsive table */
+  @media (max-width: 767px) {
+    /* Hide table headers */
+    th {
+      display: none;
+    }
+  
+    td[data-header]:before {
+      content: attr(data-header) ":\a0";  /* Added a colon and a space */
+      float: left;
+      font-weight: bold;
+    }
+    
+    td {
+      /* Make table cells behave like rows */
+      display: block;
+      clear: both;
+    }
+  }
+
+/* Link button styles for desktop */
+.hl-link-button.desktop-only {
+    padding: 1px 18px;  /* Smaller padding */
+    font-size: 14px;    /* Smaller font size */
+  }
+  
+
+/* Hide mobile-only classes on desktop */
+.desktop-only {
+    display: block;
+  }
+  .mobile-only {
+    display: none;
+  }
+  
+  /* Hide desktop-only classes on mobile */
+  @media only screen and (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    .mobile-only {
+      display: inline;
+    }
+  }
+  
+
+  

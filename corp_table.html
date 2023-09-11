@@ -6,11 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Bonds Explainer</title>
+		<title>Corporate bonds Full Table</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Link to the external CSS file -->
+		<!-- <link rel="stylesheet" href="csvDisplay.css"> -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 	</head>
 	<body class="is-preload">
 
@@ -21,7 +25,7 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="gov_table.html">Top Gilts</a></li>
-					<li><a href="corp_table.html">Corporate Bonds</a></li>
+					<li><a href="corp_table.html" class="active">Corporate Bonds</a></li>
 					<li><a href="calc.html">Yield Calculator</a></li>
 					<li><a href="index.html#three">Invest Now</a></li>
 				</ul>
@@ -32,24 +36,34 @@
 			<div id="wrapper">
 
 				<!-- Main -->
+
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Bonds Explainer</h1>
-							<h2>What is a bond?</h2>
-							<p>When you buy a bond, you are essentially lending money to the issuer. In return, the issuer promises to pay you back the original amount you lent, which we call the "principal," on a specific future date known as the "maturity date." In the meantime, the issuer will pay you interest periodically, usually once or twice a year, as a reward for lending them your money. 
-								<br><br>
-								Bonds are considered a safer investment compared to shares because they offer a fixed rate of interest and a precise date in the future when the principal will be repaid. The two main types of bonds that UK investors generally buy are government bonds (UK Gilts) and corporate bonds. 
-								</p>
-							<h2>UK Government Bonds (Gilts)</h2>
-							<p> A Gilt is effectively a loan by the investor to the government. We call these bonds risk-free because the government will always repay the principal. How do we know this? Well, in theory at least, even if the government runs out of money, it can always print more money in order to repay bondholders. 
+							<h1 class="major">Top Yielding Corporate Bonds</h1>
+							<p>Choose your tax band and find corporate bonds sorted by Gross Equivalent Yield.
+								Note: it is assumed the the corporate bonds are <i>Qualifying Corporate Bonds</i>, however,
+								we take no responsbility for the accuracy of this information. <a href="https://www.gov.uk/hmrc-internal-manuals/capital-gains-manual/cg53702"><em>QCB</em></a>
+
 							</p>
-							<h2>Corporate Bonds</h2>
-							<p> A corporate bond is a loan to a company, rather than to the government. Whereas shares represent a small fraction of the company’s assets and a claim on a fraction of its future profits, bonds do not confer any ownership at all. However, in the event that the company fails and goes bankrupt, bondholders can expect to be ahead of shareholders in the queue to recover their money. Because companies cannot print money in order to repay bondholders, we say that corporate bondholders are taking on credit risk.
-							</p>
+								<div class="button-container">
+									<button class="button primary" data-csv="bonds1.csv" onclick="loadCSV('gov_bonds_a.csv')">Additional Rate</button>
+									<button class="button" data-csv="bonds2.csv" onclick="loadCSV('bonds2.csv')">Higher Rate</button>
+									<button class="button" data-csv="bonds3.csv" onclick="loadCSV('bonds3.csv')">Basic Rate</button>
+									<button class="button" data-csv="bonds4.csv" onclick="loadCSV('bonds4.csv')">Personal Allowance</button>
+								</div>
+							<p></p>
+							<!-- Table to display CSV content -->
+							<table id="csvTable"></table>
+							<p>Data Sourced from London Stock Exchange.</p>
 						</div>
 					</section>
-
 			</div>
+
+
+  
+  <!-- Linking the external JavaScript file -->
+  <script src="csvLoader.js"></script>  
+  
 
 		<!-- Footer -->
 		<footer id="footer" class="wrapper alt">

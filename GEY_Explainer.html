@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Gross Equivalent Yield Example</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="title">InvestingInBonds</a>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="gov_table.html">Top Gilts</a></li>
+					<li><a href="corp_table.html">Corporate Bonds</a></li>
+					<li><a href="calc.html">Yield Calculator</a></li>
+					<li><a href="index.html#three">Invest Now</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Gross Equivalent Yield Example</h1>
+									<!-- <h2>Gross Equivalent Yield Example</h2> -->
+									<p>This example compares the strcture of payoffs for the bonds against a regular and fixed-term savings account, displays what is meant by <i>Gross Equivalent Yield</i> (GEY) in a more rigorous sense.<br>
+										For the purposes of this example, the tax rate is set at 45% (additional rate). <br>
+										<span style="font-size: 80%;">Note: we have rounded values to 2dp, so may not add up correctly.<span></p>
+								<!-- </div>
+								<div class="inner"> -->
+								<h3>Bond</h3>
+								<p>The bond here is free of capital gains tax, so could be a UK Government
+									Bonds (Gilt) or Qualifying Corporate Bond (QCB).<br>
+									For technical people, coupons are <i>not</i> reinvested here, meaning this is a <i>lower bound</i> for GEY
+									(the actual return will be even better).</p>
+								<ul class="alt">
+									<li>Price: £85.51</li>
+									<li>Face Value: £100.00</li>
+									<li>Coupon: 0.250%</li>
+									<li>Time to Maturity: 3 years</li>
+									<li></li>
+								</ul>
+								<div class="table-wrapper">
+									<table>
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Year</th>
+												<th>Gross Gain (£)</th>
+												<th>Net Gain (£)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Year 1</td>
+												<td>0.25 (Coupon)</td>
+												<td>0.14 (Coupon)</td>
+											</tr>
+											<tr>
+												<td>Year 2</td>
+												<td>0.25 (Coupon)</td>
+												<td>0.14 (Coupon)</td>
+											</tr>
+											<tr>
+												<td>Year 3</td>
+												<td>0.25 (Coupon) + 14.49 (Capital Gain) </td>
+												<td>0.14 (Coupon) + 14.49 (Capital Gain)</td>
+											</tr>
+											<tr>
+												<td>Total</td>
+												<td>15.23 <br> 0.75 (Coupon) + 14.49 (Capital Gain)</td>
+												<td>14.90 = 0.41 (Coupon) + 14.49 (Capital Gain)</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<!-- <td colspan="2"></td> -->
+												<td>Net Return</td>
+												<td>14.90/85.50</td>
+												<td>17.43%</td>
+												<!-- <td>Total</td>
+												<td>15.23 <br> 0.75 (Coupon) + 14.49 (Capital Gain)</td>
+												<td>14.90 = 0.41 (Coupon) + 14.49 (Capital Gain)</td> -->
+											</tr>
+										</tfoot>
+									</table>
+									
+								</div>
+								<h3>Regular Savings Account</h3>
+								<p>The regular savings account is what one would typically hold in a bank. 
+									The interest earnt per year is increasing as it is compounding.</p>
+								<ul class="alt">
+									<li>Holding time: 3 years</li>
+									<li>Annual Earning Rate (AER): 10.00%</li>
+									<li></li>
+								</ul>
+								<div class="table-wrapper">
+									<table>
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Year</th>
+												<th>Gross Gain (£)</th>
+												<th>Net Gain (£)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Year 1</td>
+												<td>8.55 (Interest)</td>
+												<td>4.70 (Interest)</td>
+											</tr>
+											<tr>
+												<td>Year 2</td>
+												<td>9.02 (Interest)</td>
+												<td>4.96 (Interest)</td>
+											</tr>
+											<tr>
+												<td>Year 3</td>
+												<td>9.52 (Interest)</td>
+												<td>5.24 (Interest)</td>
+											</tr>
+											<tr>									
+												<td>Total</td>
+												<td>27.10 <br> (Interest)</td>
+												<td>14.90 (Interest)</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<!-- <td colspan="1"></td> -->
+												<td>Net Return</td>
+												<td>14.90/85.50</td>
+												<td>17.43%</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+								<h3>Fixed-Term Savings Account</h3>
+								<p>This is when you lock your money away in a savings account for a certain amount of time. 
+									All interest income is taxed at the end of the term, hence the net gain column is empty.
+									As in the regular savings account, <thead></thead> interest earnt per year is increasing as it is compounding.
+								</p>
+								<ul class="alt">
+									<li>Holding time: 3 years</li>
+									<li>Annual Earning Rate (AER): 9.61%</li>
+									<li></li>
+								</ul>
+								<div class="table-wrapper">
+									<table>
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Year</th>
+												<th>Gross Gain (£)</th>
+												<th>Net Gain (£)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Year 1</td>
+												<td>8.22 (Interest)</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>Year 2</td>
+												<td>9.01 (Interest)</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>Year 3</td>
+												<td>9.87 (Interest)</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>Total</td>
+												<td>27.10 <br> (Interest)</td>
+												<td>14.90 (Interest)</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<!-- <td colspan="1"></td> -->
+												<td>Net Return</td>
+												<td>14.90/85.50</td>
+												<td>17.43%</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+								<p>All three investments (bonds, regular savings, fixed-term savings) achieve the same net 
+									 of 17.43% (equivalent to 5.50% net AER). 
+									 This is precisely the concept of GEY, the equivalent interest rate required 
+									 in a savings account to achieve the same return as a bond with specific parameters. <br><br>
+									 The effecive tax rate for the bond is (15.23-14.90)/15.23=2.17% 
+									 and for both savings accounts it is (27.10-14.90)/27.10=45%, the marginal tax rate of the individual.</p>
+							
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; 2023 Yajat Bansal and Tariq Shaikh. All rights reserved.</li>
+					<li><a href="disclaimer.html">Disclaimer</a></li>
+					<li><a href="privacy_policy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Disclosure</a></li>
+					<li><a href="info@investinginbonds.co.uk">info@investinginbonds.co.uk</a></li>
+					<!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
