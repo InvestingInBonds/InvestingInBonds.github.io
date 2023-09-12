@@ -75,5 +75,5 @@ function loadCSV(csvName) {
 
 // Load the bonds1.csv by default on page load
 window.onload = function() {
-    loadCSV('gov_bonds_a.csv');
+    loadCSV('data/gov_bonds_a.csv');
 }
