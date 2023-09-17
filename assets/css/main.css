@@ -3912,16 +3912,16 @@ input, select, textarea {
 /* Style for the outer container */
 .container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    height: 80vh;           /* Full viewport height. Adjust if needed */
+    justify-content: center; 
+    align-items: center;     
+    height: 80vh;           
 }
 
 /* Mobile styles */
 .responsive-col {
-    width: 100%;             /* Full width on mobile */
-    box-sizing: border-box;  /* Include padding in the total width */
-    padding: 0 0px;         /* Provide some padding on mobile */
+    width: 100%;             
+    box-sizing: border-box;  
+    padding: 0 0px;         
 }
 
 /* Image styles to ensure it scales nicely */
