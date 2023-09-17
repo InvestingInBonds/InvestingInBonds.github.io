@@ -50,7 +50,8 @@ function loadCSV(csvName) {
                         if (cellIndex === cells.length - 1) {
                             // html += `<td><button onclick="window.open('${formattedCell}', '_blank')">HL Link</button></td>`;
                             // html += `<td><button class="hl-link-button" onclick="window.open('${formattedCell}', '_blank')">HL Link</button></td>`;
-                            html += `<td><button class="hl-link-button desktop-only" onclick="window.open('${formattedCell}', '_blank')">HL Link</button><span class="hl-link-text mobile-only" onclick="window.open('${formattedCell}', '_blank')">Click Here</span></td>`;
+                            // html += `<td><button class="hl-link-button desktop-only" onclick="window.open('${formattedCell}', '_blank')">HL Link</button><span class="hl-link-text mobile-only" onclick="window.open('${formattedCell}', '_blank')">Click Here</span></td>`;
+                            html += `<td>${formattedCell}</td>`;
                         } else {
                             html += `<td>${formattedCell}</td>`;
                         }
