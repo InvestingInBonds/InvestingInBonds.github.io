@@ -201,12 +201,13 @@
 				T = 0;
 		}
 
-		let gey;
-		if (document.getElementById("savingsAccountType").value === "Fixed-Term") {
-			gey = (((100 + 100 * y * t * (1 - T)) / p - T) / (1 - T)) ** (1 / t) - 1;
-		} else {
-			gey = ((((100 + 100 * y * t * (1 - T)) / p) ** (1 / t) - 1) / (1 - T));
-		}
+		// let gey;
+		// if (document.getElementById("savingsAccountType").value === "Fixed-Term") {
+		// 	gey = (((100 + 100 * y * t * (1 - T)) / p - T) / (1 - T)) ** (1 / t) - 1;
+		// } else {
+		// 	gey = ((((100 + 100 * y * t * (1 - T)) / p) ** (1 / t) - 1) / (1 - T));
+		// }
+		gey = ((((100 + 100 * y * t * (1 - T)) / p) ** (1 / t) - 1) / (1 - T));
 
 		gey *= 100; // Convert to percentage
 
@@ -248,11 +249,11 @@
 		<option value="personalAllowance">Personal Allowance</option>
 	</select>
 
-	<label for="savingsAccountType">Savings Account Type:</label>
+	<!-- <label for="savingsAccountType">Savings Account Type:</label>
 	<select id="savingsAccountType" class="black-border">
 		<option value="Regular">Regular</option>
 		<option value="Fixed-Term">Fixed-Term</option>
-	</select>
+	</select> -->
 
 	<button onclick="calculateGEY()">Calculate</button>
 	
